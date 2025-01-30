@@ -1,4 +1,4 @@
-###💻 TAILWIND LANDING PAGE
+### 💻 TAILWIND LANDING PAGE
 
 This is a fully responsive landing page built using HTML and Tailwind CSS. The project <br/>
 is designed to provide a modern and clean user experience across all devices.
