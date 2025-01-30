@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("/src/assets/font/TTF/THICCCBOI-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+}
+
+@layer base {
+  :root {
+    --black-color: #333333;
+    --border-color: #dadada;
+    --blue-color: #0099ff;
+    --gray-color: #999999;
+    --body-color: #494949;
+    --dark-bkg: #f2fafe;
+  }
+  body {
+    color: var(--black-color);
+  }
+  a:hover {
+    @apply brightness-150;
+  }
+  h2 {
+    @apply text-[3rem] font-bold leading-[138%] sm:text-[2rem] md:text-[2.5rem];
+  }
+  h4 {
+    @apply text-[2rem] font-bold leading-[133%] sm:text-[1.75rem];
+  }
+  h5 {
+    @apply text-[1.5rem] font-bold sm:text-[1.25rem];
+  }
+  h6 {
+    @apply text-[1.25rem] leading-[130%] font-semibold sm:text-[1.125rem];
+  }
+  p {
+    @apply text-[1.125rem] text-[var(--body-color)] leading-[160%];
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-[var(--blue-color)] text-white text-lg py-3 px-6 rounded-md leading-[160%] w-full sm:w-[200px] cursor-pointer;
+  }
+  .primary-btn:hover {
+    @apply brightness-110;
+  }
+  .secondary-btn {
+    @apply w-full sm:w-[200px] text-[var(--blue-color)] border border-[var(--blue-color)] rounded-md text-lg leading-[160%] cursor-pointer;
+  }
+  .secondary-btn:hover {
+    @apply bg-[var(--border-color)];
+  }
+  .normal-text {
+    @apply leading-[156%] text-[var(--body-color)];
+  }
+  .media-btn {
+    @apply cursor-pointer;
+  }
+  .media-btn:hover {
+    @apply brightness-150;
+  }
+  .special-font {
+    @apply font-[THICCCBOI] mt-[12px];
+  }
+}

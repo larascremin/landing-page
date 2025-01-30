@@ -1,164 +1,288 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invra Project</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/css/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo"><img src="/assets/logo.svg" /></div>
-        <ul class="links">
+  <body class="font-sans">
+    <header
+      class="py-8 px-4 sm:px-6 lg:px-20 border-b border-[var(--border-color)]"
+    >
+      <nav class="flex justify-between items-center">
+        <div>
+          <img
+            src="./src/assets/img/logo.svg"
+            class="max-w-[200px] h-auto"
+            alt="Logo"
+          />
+        </div>
+        <ul class="flex gap-10 leading-[160%] text-lg hidden sm:flex">
           <li><a href="#">Home</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Portfolio</a></li>
         </ul>
-        <button class="contact-btn">Contact</button>
+        <button class="primary-btn hidden sm:block">Contact</button>
+        <div class="sm:hidden">
+          <button class="text-xl">☰</button>
+        </div>
       </nav>
     </header>
+
     <main>
-      <section class="hero">
-        <div class="left-content">
-          <div class="text">
-            <h1 class="main-title">We are the best agency in the world</h1>
-            <p>
+      <section
+        class="hero h-screen grid grid-cols-1 sm:grid-cols-12 gap-4 mx-4 sm:mx-6 lg:mx-20 mb-20 items-center"
+      >
+        <div
+          class="left-content col-span-1 sm:col-span-6 flex flex-col gap-10 max-w-[85%] mb-20 mt-12 sm:mt-0"
+        >
+          <div class="text flex flex-col gap-8">
+            <h1
+              class="main-title text-[2.5rem] font-bold leading-[110%] tracking-[-1.5px] sm:text-[3rem] md:text-[3.75rem]"
+            >
+              We are the best agency in the world
+            </h1>
+            <p class="leading-[160%] sm:text-[1rem] md:text-[1.125rem]">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
             </p>
           </div>
-          <div class="buttons">
-            <button class="project-btn">Start a Project</button>
-            <button class="learn-btn">Learn more</button>
+          <div class="buttons flex gap-4">
+            <button class="primary-btn">Start a Project</button>
+            <button class="secondary-btn">Learn more</button>
           </div>
         </div>
-        <div class="right-content">
-          <img class="hero-image" src="/assets/hero-image.png" />
+
+        <div
+          class="right-content col-span-1 sm:col-span-6 h-full flex justify-center items-center py-10 hidden sm:block"
+        >
+          <img
+            class="hero-image max-w-full h-auto"
+            src="./src/assets/img/heroImage.png"
+            alt="Hero Image"
+          />
         </div>
       </section>
-      <section class="service">
-        <div class="service-content">
-          <p class="mini-title">Service</p>
-          <h2>We Provide</h2>
+
+      <section
+        class="service flex flex-col justify-center items-center text-center py-[120px] px-[80px] bg-[var(--dark-bkg)] gap-[72px]"
+      >
+        <div class="service-content w-full sm:w-[40%]">
+          <h6>Service</h6>
+          <h2 class="mb-[32px] mt-[12px]">We Provide</h2>
           <p class="normal-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
             mattis nunc aliquam tincidunt est non. Viverra nec eu.
           </p>
         </div>
 
-        <div class="cards">
-          <div class="individual-card">
-            <img class="card-img" src="/assets/card-web-design.svg" />
-            <h4 class="card-title">Web Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div
+            class="individual-card bg-white rounded-md py-[58px] px-[35px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="card-img h-[100px] w-[100px] mb-4"
+              src="./src/assets/img/webDesgn.png"
+            />
+            <h4>Web Design</h4>
+            <p class="text-[0.875rem] mt-[24px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
-          <div class="individual-card">
-            <img class="card-img" src="/assets/card-uiux-design.svg" />
-            <h4 class="card-title">UI/UX Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div
+            class="individual-card bg-white rounded-md py-[58px] px-[35px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="card-img h-[100px] w-[100px] mb-4"
+              src="./src/assets/img/uiuxDesign.png"
+            />
+            <h4>UI/UX Design</h4>
+            <p class="text-[0.875rem] mt-[24px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
-          <div class="individual-card">
-            <img class="card-img" src="/assets/card-graphics-design.svg" />
-            <h4 class="card-title">Graphics Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div
+            class="individual-card bg-white rounded-md py-[58px] px-[35px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="card-img h-[100px] w-[100px] mb-4"
+              src="./src/assets/img/graphicsDesign.png"
+            />
+            <h4>Graphics Design</h4>
+            <p class="text-[0.875rem] mt-[24px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
-          <div class="individual-card">
-            <img class="card-img" src="/assets/card-seo-marketing.svg" />
-            <h4 class="card-title">SEO Marketing</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div
+            class="individual-card bg-white rounded-md py-[58px] px-[35px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="card-img h-[100px] w-[100px] mb-4"
+              src="./src/assets/img/seoMarketing.png"
+            />
+            <h4>SEO Marketing</h4>
+            <p class="text-[0.875rem] mt-[24px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
         </div>
       </section>
-      <section class="about-us">
-        <div class="about-left">
-          <img class="about-img" src="/assets/about-image.png" />
+
+      <section
+        class="about-us grid grid-cols-1 sm:grid-cols-12 gap-4 mx-4 sm:mx-[80px] items-center py-16"
+      >
+        <!-- Imagem -->
+        <div class="about-left col-span-12 sm:col-span-6">
+          <img
+            class="about-img w-full h-auto"
+            src="./src/assets/img/aboutUsImage.png"
+            alt="About Us Image"
+          />
         </div>
-        <div class="about-right">
-          <div class="about-one">
-            <p class="mini-title">About Us</p>
-            <h2 class="title-about">We are a creative agency</h2>
+
+        <!-- Conteúdo -->
+        <div class="about-right col-span-12 sm:col-span-6 flex flex-col gap-6">
+          <div class="about-one flex flex-col gap-4">
+            <h6 class="text-[1.125rem] sm:text-[1.25rem]">About Us</h6>
+            <h2 class="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-bold">
+              We are a creative agency
+            </h2>
           </div>
-          <div class="about-two">
-            <p class="about-text">
+
+          <div class="about-two flex flex-col gap-10">
+            <p
+              class="about-text text-[1rem] sm:text-[1.125rem] leading-[156%] pr-[50px] sm:pr-0"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec,
               luctus sapien vulputate urna tempor euismod adipiscing massa.
               Volutpat nunc quis dictum consectetur egestas varius.<br /><br />
               Ac sagittis tellus, sodales commodo elit, sociis purus. Egestas
               mauris eget commodo commodo et vel fermentum ultrices.
             </p>
-            <button class="more-btn">More About Us</button>
+            <button class="primary-btn">More About Us</button>
           </div>
         </div>
       </section>
-      <section class="team">
-        <div class="service-content">
-          <p class="mini-title">Meet Our Team</p>
-          <h2>Our Expert Members</h2>
+
+      <section
+        class="team flex flex-col justify-center items-center text-center py-[120px] px-[80px] bg-[var(--dark-bkg)] gap-[72px]"
+      >
+        <div class="service-content w-full sm:w-[40%]">
+          <h6>Meet Our Team</h6>
+          <h2 class="mt-[16px] mb-[32px]">Our Expert Members</h2>
           <p class="normal-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam<br />
             vivamus pretium maecenas amet.
           </p>
         </div>
-        <div class="people">
-          <div class="person-img">
-            <img class="img-team" src="/assets/JaneCooper.jpg" />
-            <div class="person-card">
-              <div class="icons">
-                <button><img src="/assets/iconFacebook.svg" /></button>
-                <button><img src="/assets/iconPinterest.svg" /></button>
-                <button><img src="/assets/iconDribble.svg" /></button>
-                <button><img src="/assets/iconInstagram.svg" /></button>
+        <div
+          class="people grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+        >
+          <div class="person-img relative z-10">
+            <img
+              class="img-team w-full h-auto"
+              src="./src/assets/img/JaneCooper.jpg"
+            />
+            <div
+              class="person-card relative flex flex-col gap-4 justify-start bg-white rounded-[4.6px] mx-[24px] mt-[-50px] py-[12px] px-[12px] pb-[22px] shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] text-left z-50"
+            >
+              <div class="icons flex gap-4">
+                <button>
+                  <img src="./src/assets/icon/iconFacebook.svg" />
+                </button>
+                <button>
+                  <img src="./src/assets/icon/iconPinterest.svg" />
+                </button>
+                <button><img src="./src/assets/icon/iconDribble.svg" /></button>
+                <button>
+                  <img src="./src/assets/icon/iconInstagram.svg" />
+                </button>
               </div>
-              <div class="text-person">
+              <div class="text-person flex flex-col gap-1.5">
                 <h5>Jane Cooper</h5>
                 <p>Developer</p>
               </div>
             </div>
           </div>
-          <div class="person-img">
-            <img class="img-team" src="/assets/BrooklynSimmons.jpg" />
-            <div class="person-card">
-              <div class="icons">
-                <button><img src="/assets/iconFacebook.svg" /></button>
-                <button><img src="/assets/iconPinterest.svg" /></button>
-                <button><img src="/assets/iconDribble.svg" /></button>
-                <button><img src="/assets/iconInstagram.svg" /></button>
+          <div class="person-img relative z-10">
+            <img
+              class="img-team w-full h-auto"
+              src="./src/assets/img/BrooklynSimmons.jpg"
+            />
+            <div
+              class="person-card relative flex flex-col gap-4 justify-start bg-white rounded-[4.6px] mx-[24px] mt-[-50px] py-[12px] px-[12px] pb-[22px] shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] text-left z-50"
+            >
+              <div class="icons flex gap-4">
+                <button>
+                  <img src="./src/assets/icon/iconFacebook.svg" />
+                </button>
+                <button>
+                  <img src="./src/assets/icon/iconPinterest.svg" />
+                </button>
+                <button><img src="./src/assets/icon/iconDribble.svg" /></button>
+                <button>
+                  <img src="./src/assets/icon/iconInstagram.svg" />
+                </button>
               </div>
-              <div class="text-person">
+              <div class="text-person flex flex-col gap-1.5">
                 <h5>Brooklyn Simmons</h5>
                 <p>Designer</p>
               </div>
             </div>
           </div>
-          <div class="person-img">
-            <img class="img-team" src="/assets/GuyHawkins.jpg" />
-            <div class="person-card">
-              <div class="icons">
-                <button><img src="/assets/iconFacebook.svg" /></button>
-                <button><img src="/assets/iconPinterest.svg" /></button>
-                <button><img src="/assets/iconDribble.svg" /></button>
-                <button><img src="/assets/iconInstagram.svg" /></button>
+          <div class="person-img relative z-10">
+            <img
+              class="img-team w-full h-auto"
+              src="./src/assets/img/GuyHawkins.jpg"
+            />
+            <div
+              class="person-card relative flex flex-col gap-4 justify-start bg-white rounded-[4.6px] mx-[24px] mt-[-50px] py-[12px] px-[12px] pb-[22px] shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] text-left z-50"
+            >
+              <div class="icons flex gap-4">
+                <button>
+                  <img src="./src/assets/icon/iconFacebook.svg" />
+                </button>
+                <button>
+                  <img src="./src/assets/icon/iconPinterest.svg" />
+                </button>
+                <button><img src="./src/assets/icon/iconDribble.svg" /></button>
+                <button>
+                  <img src="./src/assets/icon/iconInstagram.svg" />
+                </button>
               </div>
-              <div class="text-person">
+              <div class="text-person flex flex-col gap-1.5">
                 <h5>Guy Hawkins</h5>
                 <p>Marketer</p>
               </div>
             </div>
           </div>
-          <div class="person-img">
-            <img class="img-team" src="/assets/KristinWatson.jpg" />
-            <div class="person-card">
-              <div class="icons">
-                <button><img src="/assets/iconFacebook.svg" /></button>
-                <button><img src="/assets/iconPinterest.svg" /></button>
-                <button><img src="/assets/iconDribble.svg" /></button>
-                <button><img src="/assets/iconInstagram.svg" /></button>
+          <div class="person-img relative z-10">
+            <img
+              class="img-team w-full h-auto"
+              src="./src/assets/img/KristinWatson.jpg"
+            />
+            <div
+              class="person-card relative flex flex-col gap-4 justify-start bg-white rounded-[4.6px] mx-[24px] mt-[-50px] py-[12px] px-[12px] pb-[22px] shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] text-left z-50"
+            >
+              <div class="icons flex gap-4">
+                <button>
+                  <img src="./src/assets/icon/iconFacebook.svg" />
+                </button>
+                <button>
+                  <img src="./src/assets/icon/iconPinterest.svg" />
+                </button>
+                <button><img src="./src/assets/icon/iconDribble.svg" /></button>
+                <button>
+                  <img src="./src/assets/icon/iconInstagram.svg" />
+                </button>
               </div>
-              <div class="text-person">
+              <div class="text-person flex flex-col gap-1.5">
                 <h5>Kristin Watson</h5>
                 <p>Photographer</p>
               </div>
@@ -166,240 +290,351 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
-        <h2 class="portfolio-title">More Projects</h2>
-        <div class="projects">
-          <div class="project-card">
-            <img src="/assets/projectMedicalWebsite.jpg" />
+
+      <section class="portfolio py-[120px] px-[72px] flex flex-col gap-[80px]">
+        <h2>More Projects</h2>
+        <div
+          class="projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
+        >
+          <div
+            class="project-card p-5 flex flex-col gap-6 rounded-md shadow-md"
+          >
+            <img src="./src/assets/img/projectMedicalWebsite.jpg" />
             <div class="project-text">
               <h4>Medical Website</h4>
-              <p class="small-text">
+              <p
+                class="small-text text-[0.875rem] leading-[155%] text-[var(--body-color)] my-5"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 sed consectetur malesuada sodales enim viverra odio diam.
                 Nascetur dui elementum,
               </p>
-              <a href="" class="special-font"
-                >Read more <img src="/assets/iconArrow.svg"
-              /></a>
+              <a
+                href=""
+                class="special-font inline-flex items-center gap-3 text-[1.125rem] font-bold pb-2 border-b-2 border-[var(--blue-color)]"
+              >
+                Read more <img src="./src/assets/icon/iconArrow.svg" />
+              </a>
             </div>
           </div>
-          <div class="project-card">
-            <img src="/assets/projectCryptocurrencyWebsite.jpg" />
+          <div
+            class="project-card p-5 flex flex-col gap-6 rounded-md shadow-md"
+          >
+            <img src="./src/assets/img/projectCryptocurrencyWebsite.jpg" />
             <div class="project-text">
               <h4>Cryptocurrency Website</h4>
-              <p class="small-text">
+              <p
+                class="small-text text-[0.875rem] leading-[155%] text-[var(--body-color)] my-5"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 sed consectetur malesuada sodales enim viverra odio diam.
                 Nascetur dui elementum,
               </p>
-              <a href="" class="special-font"
-                >Read more <img src="/assets/iconArrow.svg"
-              /></a>
+              <a
+                href=""
+                class="special-font inline-flex items-center gap-3 text-[1.125rem] font-bold pb-2 border-b-2 border-[var(--blue-color)]"
+              >
+                Read more <img src="./src/assets/icon/iconArrow.svg" />
+              </a>
             </div>
           </div>
-          <div class="project-card">
-            <img src="/assets/projectBitcoinInvestment.jpg" />
+          <div
+            class="project-card p-5 flex flex-col gap-6 rounded-md shadow-md"
+          >
+            <img src="./src/assets/img/projectBitcoinInvestment.jpg" />
             <div class="project-text">
-              <h4>Bitcoin investment Web</h4>
-              <p class="small-text">
+              <h4>Bitcoin Investment Web</h4>
+              <p
+                class="small-text text-[0.875rem] leading-[155%] text-[var(--body-color)] my-5"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 sed consectetur malesuada sodales enim viverra odio diam.
                 Nascetur dui elementum,
               </p>
-              <a href="" class="special-font"
-                >Read more <img src="/assets/iconArrow.svg"
-              /></a>
+              <a
+                href=""
+                class="special-font inline-flex items-center gap-3 text-[1.125rem] font-bold pb-2 border-b-2 border-[var(--blue-color)]"
+              >
+                Read more <img src="./src/assets/icon/iconArrow.svg" />
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="faq">
-        <div class="faq-content">
-          <p class="mini-title">FAQ'S</p>
-          <h2>Find the answers you need</h2>
-        </div>
-        <div class="questions">
-          <div class="question-card">
-            <div class="visible-question">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <img class="opened-arrow" src="/assets/iconArrow.svg" />
+
+      <section
+        class="faq flex flex-col justify-center items-center text-center py-[120px] px-[10%] bg-[var(--dark-bkg)] gap-[80px]"
+      >
+        <div class="faq-content w-full max-w-screen-xl">
+          <h6>FAQ'S</h6>
+          <h2 class="mb-[80px] mt-[16px]">Find the answers you need</h2>
+          <div class="questions flex flex-col gap-6 w-full">
+            <div
+              class="question-card text-left flex flex-col w-full bg-white p-8 shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] rounded-md gap-6"
+            >
+              <div class="visible-question flex justify-between">
+                <p class="font-bold text-[1.125rem] leading-[160%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <img
+                  class="opened-arrow rotate-[-90deg]"
+                  src="./src/assets/icon/iconArrow.svg"
+                />
+              </div>
+              <p class="hidden-answer mb-[37px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus
+                ornare in eget mauris. Porttitor semper sed nisi ac adipiscing
+                vitae. Lobortis imperdiet ornare eleifend nisl ut auctor. Ornare
+                etiam neque elementum mattis ultrices.
+              </p>
             </div>
-            <p class="hidden-answer">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus
-              ornare in eget mauris. Porttitor semper sed nisi ac adipiscing
-              vitae. Lobortis imperdiet ornare eleifend nisl ut auctor. Ornare
-              etiam neque elementum mattis ultrices.
-            </p>
-          </div>
-          <div class="question-card">
-            <div class="visible-question">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <img class="closed-arrow" src="/assets/iconArrow.svg" />
+            <div
+              class="question-card text-left flex flex-col w-full bg-white p-8 shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] rounded-md gap-6"
+            >
+              <div class="visible-question flex justify-between">
+                <p class="font-bold text-[1.125rem] leading-[160%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <img
+                  class="closed-arrow rotate-[90deg]"
+                  src="./src/assets/icon/iconArrow.svg"
+                />
+              </div>
             </div>
-          </div>
-          <div class="question-card">
-            <div class="visible-question">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <img class="closed-arrow" src="/assets/iconArrow.svg" />
+            <div
+              class="question-card text-left flex flex-col w-full bg-white p-8 shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] rounded-md gap-6"
+            >
+              <div class="visible-question flex justify-between">
+                <p class="font-bold text-[1.125rem] leading-[160%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <img
+                  class="closed-arrow rotate-[90deg]"
+                  src="./src/assets/icon/iconArrow.svg"
+                />
+              </div>
             </div>
-          </div>
-          <div class="question-card">
-            <div class="visible-question">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <img class="closed-arrow" src="/assets/iconArrow.svg" />
+            <div
+              class="question-card text-left flex flex-col w-full bg-white p-8 shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] rounded-md gap-6"
+            >
+              <div class="visible-question flex justify-between">
+                <p class="font-bold text-[1.125rem] leading-[160%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <img
+                  class="closed-arrow rotate-[90deg]"
+                  src="./src/assets/icon/iconArrow.svg"
+                />
+              </div>
             </div>
-          </div>
-          <div class="question-card">
-            <div class="visible-question">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <img class="closed-arrow" src="/assets/iconArrow.svg" />
+            <div
+              class="question-card text-left flex flex-col w-full bg-white p-8 shadow-[0px_10px_20px_rgba(164,_217,_253,_0.15)] rounded-md gap-6"
+            >
+              <div class="visible-question flex justify-between">
+                <p class="font-bold text-[1.125rem] leading-[160%]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <img
+                  class="closed-arrow rotate-[90deg]"
+                  src="./src/assets/icon/iconArrow.svg"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="testimonial">
-        <div class="text-testmonial">
+
+      <section
+        class="testimonial flex flex-col gap-[48px] py-[120px] px-[80px] pb-[102px]"
+      >
+        <div class="text-testmonial flex flex-col gap-[24px]">
           <h2>Customer testimonials</h2>
-          <p class="normal-text">
+          <p class="normal-text text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div class="container-testimonials">
-          <div class="card-testimonial">
-            <div class="stars">
-              <img src="/assets/iconStarOne.svg" />
-              <img src="/assets/iconStarTwo.svg" />
-              <img src="/assets/iconStarThree.svg" />
-              <img src="/assets/iconStarFour.svg" />
-              <img src="/assets/iconStarFive.svg" />
+        <div
+          class="container-testimonials grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- Testimonial 1 -->
+          <div class="card-testimonial flex flex-col gap-6 p-8 shadow-md">
+            <div class="stars flex gap-1">
+              <img src="./src/assets/icon/iconStarOne.svg" />
+              <img src="./src/assets/icon/iconStarTwo.svg" />
+              <img src="./src/assets/icon/iconStarThree.svg" />
+              <img src="./src/assets/icon/iconStarFour.svg" />
+              <img src="./src/assets/icon/iconStarFive.svg" />
             </div>
-            <p class="feedback">
+            <p class="feedback text-sm leading-[155%] text-[var(--body-color)]">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare."
             </p>
-            <div class="user">
-              <img src="/assets/avatarJeromeBell.png" />
+            <div class="user flex items-center gap-5">
+              <img
+                class="h-[56px]"
+                src="./src/assets/img/avatarJeromeBell.png"
+              />
               <div class="user-info">
-                <p class="name">Jerome Bell</p>
-                <p class="function">Marketing Coordinator</p>
+                <h6 class="name font-bold leading-[150%]">Jerome Bell</h6>
+                <p class="function text-[var(--body-color)] leading-[150%]">
+                  Marketing Coordinator
+                </p>
               </div>
             </div>
           </div>
-          <div class="card-testimonial">
-            <div class="stars">
-              <img src="/assets/iconStarOne.svg" />
-              <img src="/assets/iconStarTwo.svg" />
-              <img src="/assets/iconStarThree.svg" />
-              <img src="/assets/iconStarFour.svg" />
-              <img src="/assets/iconStarFive.svg" />
+
+          <!-- Testimonial 2 -->
+          <div class="card-testimonial flex flex-col gap-6 p-8 shadow-md">
+            <div class="stars flex gap-1">
+              <img src="./src/assets/icon/iconStarOne.svg" />
+              <img src="./src/assets/icon/iconStarTwo.svg" />
+              <img src="./src/assets/icon/iconStarThree.svg" />
+              <img src="./src/assets/icon/iconStarFour.svg" />
+              <img src="./src/assets/icon/iconStarFive.svg" />
             </div>
-            <p class="feedback">
+            <p class="feedback text-sm leading-[155%] text-[var(--body-color)]">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare."
             </p>
-            <div class="user">
-              <img src="/assets/avatarCodyFisher.png" />
+            <div class="user flex items-center gap-5">
+              <img
+                class="h-[56px]"
+                src="./src/assets/img/avatarCodyFisher.png"
+              />
               <div class="user-info">
-                <p class="name">Cody Fisher</p>
-                <p class="function">President of Sales</p>
+                <h6 class="name font-bold leading-[150%]">Cody Fisher</h6>
+                <p class="function text-[var(--body-color)] leading-[150%]">
+                  President of Sales
+                </p>
               </div>
             </div>
           </div>
-          <div class="card-testimonial">
-            <div class="stars">
-              <img src="/assets/iconStarOne.svg" />
-              <img src="/assets/iconStarTwo.svg" />
-              <img src="/assets/iconStarThree.svg" />
-              <img src="/assets/iconStarFour.svg" />
-              <img src="/assets/iconStarFive.svg" />
+
+          <!-- Testimonial 3 -->
+          <div class="card-testimonial flex flex-col gap-6 p-8 shadow-md">
+            <div class="stars flex gap-1">
+              <img src="./src/assets/icon/iconStarOne.svg" />
+              <img src="./src/assets/icon/iconStarTwo.svg" />
+              <img src="./src/assets/icon/iconStarThree.svg" />
+              <img src="./src/assets/icon/iconStarFour.svg" />
+              <img src="./src/assets/icon/iconStarFive.svg" />
             </div>
-            <p class="feedback">
+            <p class="feedback text-sm leading-[155%] text-[var(--body-color)]">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare."
             </p>
-            <div class="user">
-              <img src="/assets/avatarRobertFox.png" />
+            <div class="user flex items-center gap-5">
+              <img
+                class="h-[56px]"
+                src="./src/assets/img/avatarRobertFox.png"
+              />
               <div class="user-info">
-                <p class="name">Robert Fox</p>
-                <p class="function">Web Designer</p>
+                <h6 class="name font-bold leading-[150%]">Robert Fox</h6>
+                <p class="function text-[var(--body-color)] leading-[150%]">
+                  Web Designer
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="cta">
-        <div class="left-cta">
+
+      <section
+        class="cta mx-0 sm:mx-[80px] px-[32px] sm:px-[96px] py-[50px] sm:py-[110px] bg-[var(--black-color)] text-white rounded-[4px] flex flex-col lg:flex-row justify-between items-center"
+      >
+        <div class="left-cta flex flex-col gap-6 mb-8 lg:mb-0">
           <h4>Do you have a project in mind?</h4>
-          <p>
+          <p class="text-white">
             Lorem ipsum dolor sit amet consectetur adipiscing elit<br />
             amet diam in est pharetra porttitor libero.
           </p>
         </div>
         <div class="right-cta">
-          <button class="talk-btn">Let's talk</button>
+          <button class="primary-btn">Let's talk</button>
         </div>
       </section>
-      <footer>
-        <div class="social-media">
-          <img src="/assets/logo.svg" />
-          <p>
+
+      <footer
+        class="bg-[var(--dark-bkg)] grid grid-cols-12 gap-4 px-[32px] sm:px-[80px] py-[60px] sm:py-[94px]"
+      >
+        <div class="social-media col-span-12 lg:col-span-4 w-full lg:w-[80%]">
+          <img src="./src/assets/img/logo.svg" />
+          <p
+            class="text-[var(--body-color)] text-[1.125rem] my-8 leading-[160%]"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
             nulla massa fringilla.
           </p>
-          <div class="icons-media">
-            <button class="media-btn">
-              <img src="/assets/iconTwitter.svg" />
+          <div class="icons-media flex gap-4">
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconTwitter.svg" />
             </button>
-            <button class="media-btn">
-              <img src="/assets/iconInstagramFilled.svg" />
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconInstagramFilled.svg" />
             </button>
-            <button class="media-btn">
-              <img src="/assets/iconLinkedin.svg" />
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconLinkedin.svg" />
             </button>
-            <button class="media-btn">
-              <img src="/assets/iconYoutube.svg" />
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconYoutube.svg" />
             </button>
-            <button class="media-btn">
-              <img src="/assets/iconWhatsapp.svg" />
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconWhatsapp.svg" />
             </button>
-            <button class="media-btn">
-              <img src="/assets/iconBe.svg" />
+            <button class="media-btn bg-white rounded-md p-2">
+              <img src="./src/assets/icon/iconBe.svg" />
             </button>
           </div>
         </div>
-        <div class="menu">
-          <h5>Menu</h5>
-          <ul class="footer-links">
-            <li><a>Home</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Blog</a></li>
-            <li><a>Blog Post</a></li>
-            <li><a>Contact</a></li>
+
+        <div
+          class="menu col-span-12 sm:col-span-6 lg:col-span-2 flex flex-col gap-6 sm:gap-10"
+        >
+          <h6>Menu</h6>
+          <ul
+            class="footer-links flex flex-col gap-4 sm:gap-5 text-[var(--body-color)] text-lg leading-7"
+          >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog Post</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="pages">
-          <h5>Utility Pages</h5>
-          <ul class="footer-links">
-            <li><a>Start Here</a></li>
-            <li><a>Styleguide</a></li>
-            <li><a>Password Protected</a></li>
-            <li><a>404 Not Found</a></li>
-            <li><a>Licenses</a></li>
+
+        <div
+          class="pages col-span-12 sm:col-span-6 lg:col-span-3 flex flex-col gap-6 sm:gap-10"
+        >
+          <h6>Utility Pages</h6>
+          <ul
+            class="footer-links flex flex-col gap-4 sm:gap-5 text-[var(--body-color)] text-lg leading-7"
+          >
+            <li><a href="#">Start Here</a></li>
+            <li><a href="#">Styleguide</a></li>
+            <li><a href="#">Password Protected</a></li>
+            <li><a href="#">404 Not Found</a></li>
+            <li><a href="#">Licenses</a></li>
           </ul>
         </div>
-        <div class="newsletter">
-          <h5>Subscribe to our newsletter</h5>
-          <div class="newsletter-content">
-            <p>
+
+        <div
+          class="newsletter col-span-12 lg:col-span-3 flex flex-col gap-6 sm:gap-10"
+        >
+          <h6>Subscribe to our newsletter</h6>
+          <div class="newsletter-content flex flex-col gap-6 sm:gap-8">
+            <p class="text-lg text-[var(--body-color)] leading-7">
               Lorem ipsum dolor sit amet consectetur adipiscing elit am dolor
               sit.
             </p>
-            <div class="newsletter-buttons">
-              <input class="enter-email" placeholder="Enter your e-mail" />
-              <button class="subscribe-btn">Subscribe</button>
+            <div class="newsletter-buttons flex flex-col gap-6">
+              <input
+                class="enter-email px-6 py-3 text-[var(--gray-color)] bg-[var(--black-color)] rounded-md"
+                placeholder="Enter your e-mail"
+              />
+              <button class="primary-btn">Subscribe</button>
             </div>
           </div>
         </div>
