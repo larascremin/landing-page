@@ -1,14 +1,14 @@
 ### 💻 TAILWIND LANDING PAGE
 
-This is a fully responsive landing page built using HTML and Tailwind CSS. The project <br/>
-is designed to provide a modern and clean user experience across all devices.
+This is a fully responsive landing page built using HTML and Tailwind CSS. The project is designed <br/>
+to provide a modern and clean user experience across all devices. The page was created strictly for <br/> 
+styling purposes and is static.
 
 See the live page here -> https://landing-page-tailwindv3.netlify.app/
 
-##
 ### Features
 
-- Fully Responsive: The page adapts seamlessly to different screen sizes, ensuring a smooth experience on different devices.
+- Fully Responsive: The page adapts seamlessly to different screen sizes, ensuring a smooth experience.
 - Optimized Performance: The page is lightweight and loads quickly for better user experience.
 - Components: Creation of layer components and definition of variables and standard styles in the base layer.
 
